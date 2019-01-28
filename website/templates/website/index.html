@@ -1,0 +1,32 @@
+<!-- Página inicial do portal
+  extendido do template base -->
+{% extends "website/_layouts/base.html" %}
+
+
+{% block title %}Portal de Noticias{% endblock %}
+
+{% block conteudo %}
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+      <h4>Portal de Notícias</h4><br>
+      <h6>As <u>principais</u> notícias dos <u>principais</u> sites de <code>Tecnologia</code></h6><br>
+      <div class="card">
+        <div class="card-body">
+          <div class="card-body">
+            <h5 class="card-title">Lista de Notícias</h5>
+            <p class="card-text">
+              Principais notícias do <code>TecMundo</code>.
+            </p>
+            <!-- Abre a página com as notícias do site Tecmundo-->
+            <a href="{% url 'website:lista_noticias' %}"
+               class="btn btn-primary">
+              Abrir lista de notícias</a>
+          </div>
+        </div>>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
